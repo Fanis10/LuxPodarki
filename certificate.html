@@ -1,0 +1,400 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.css" />
+	<title>Подарочные сертификаты</title>
+</head>
+
+
+<body>
+
+	<main class="main">
+        <section class="certificate-main">
+            <div class="container">
+                <div class="certificate-main__inner">
+                    <div class="certificate-main__title h1">Подарочные сертификаты</div>
+                    <div class="certificate-main__img">
+                        <img src="img/certificate-main__img.webp" alt="">
+                    </div>
+                    <div class="certificate-main__text">
+                        <p>В поиске идеального подарка? Подарите близким радость выбора с неповторимыми подарочными картами и электронными сертификатами от luxpodarki.ru!</p>
+                        <p>Это идеальный подарок в тех случаях, когда вы не уверены в предпочтениях получателя или, когда хотите дать возможность самому выбрать подарок по своему вкусу и настроению.</p>
+                    </div>
+                    <div class="certificate-main__cards">
+                        <div class="certificate-main__card tabs-inner">
+                            <div class="certificate-main__card-top">
+                                <div class="certificate-main__card-slider">
+                                    <div class="swiper mySwiper">
+                                        <div class="swiper-wrapper">
+                                            <div class="swiper-slide">
+                                                <img src="img/certificate-main__img2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/certificate-main__img2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/certificate-main__img2.webp" alt="">
+                                            </div>
+                                            <div class="swiper-slide">
+                                                <img src="img/certificate-main__img2.webp" alt="">
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class="swiper-button-next">
+                                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M1.18209 17.6987L0.121094 16.6387L7.75812 9.00171L0.121094 1.36469L1.18209 0.304688L9.87912 9.00171L1.18209 17.6987Z" fill="#83878D"/>
+                                        </svg>
+                                    </div>
+                                    <div class="swiper-button-prev">
+                                        <svg width="10" height="18" viewBox="0 0 10 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+                                            <path d="M8.81791 17.6987L9.87891 16.6387L2.24188 9.00171L9.87891 1.36469L8.81791 0.304688L0.120876 9.00171L8.81791 17.6987Z" fill="#83878D"/>
+                                        </svg>
+                                    </div>
+                                    <div class="swiper-pagination"></div>
+                                </div>
+                            </div>
+                            <div class="certificate-main__card-desc">
+                                <div class="certificate-main__card-title text30">Пластиковая карта</div>
+                                <div class="certificate-main__tabs-wrap">
+                                    <div class="certificate-main__card-tabs">
+                                        <div data-tab-path="1" class="certificate-main__card-tab tab active-tab">
+                                            <span>Выберите сумму</span>
+                                        </div>
+                                        <div data-tab-path="2" class="certificate-main__card-tab tab">
+                                            <span>Произвольная сумма</span>
+                                        </div>
+                                    </div>
+                                </div>
+                                <div data-content-path="1" class="tab__content tab__content--active">
+                                    <table class="cards-table">
+                                        <thead>
+                                            <tr>
+                                                <th><div class="certificate-main__card-subtitle">Выберите сумму</div></th>
+                                                <th><div class="certificate-main__card-subtitle">Количество</div></th>
+                                                <th><div class="certificate-main__card-subtitle">Добавить еще карту</div></th>
+                                            </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="certificate-main__card-select custom_select">
+                                                    <select>
+                                                        <option value="15 000 ₽">15 000 ₽</option>
+                                                        <option value="10 000 ₽">10 000 ₽</option>
+                                                        <option value="10 000 ₽">5 000 ₽</option>
+                                                    </select>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cartcalc">
+                                                    <div class="ccalc-minus">
+                                                        <img src="img/minus.svg" alt="">
+                                                    </div>
+                                                    <input type="text" value="1">
+                                                    <div class="ccalc-plus">
+                                                        <img src="img/plus.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="add-wrap">
+                                                    <button class="add-wrap__btn btn">
+                                                        <i>
+                                                            <img src="img/plus.svg" alt="">
+                                                        </i>
+                                                        <span>добавить</span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div data-content-path="2" class="tab__content">
+                                    <table class="cards-table2">
+                                        <thead>
+                                        <tr>
+                                            <th><div class="certificate-main__card-subtitle">Укажите сумму</div></th>
+                                            <th><div class="certificate-main__card-subtitle">Количество</div></th>
+                                            <th><div class="certificate-main__card-subtitle">Добавить еще карту</div></th>
+                                        </tr>
+                                        </thead>
+                                        <tbody>
+                                        <tr>
+                                            <td>
+                                                <div class="certificate-main__card-input input-number">
+                                                    <input class="money" type="number" />
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="cartcalc">
+                                                    <div class="ccalc-minus">
+                                                        <img src="img/minus.svg" alt="">
+                                                    </div>
+                                                    <input type="text" value="1">
+                                                    <div class="ccalc-plus">
+                                                        <img src="img/plus.svg" alt="">
+                                                    </div>
+                                                </div>
+                                            </td>
+                                            <td>
+                                                <div class="add-wrap">
+                                                    <button class="add-wrap__btn btn">
+                                                        <i>
+                                                            <img src="img/plus.svg" alt="">
+                                                        </i>
+                                                        <span>добавить</span>
+                                                    </button>
+                                                </div>
+                                            </td>
+                                        </tr>
+                                        </tbody>
+                                    </table>
+                                </div>
+                                <div class="certificate-main__card-btns">
+                                    <button class="certificate-main__card-btn btn btn-black">
+                                        <span>Перейти в корзину</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-main__card">
+                            <div class="certificate-main__card-top">
+                                <div class="certificate-main__card-img">
+                                    <img src="img/certificate-main__img3.webp" alt="">
+                                </div>
+                            </div>
+                            <div class="certificate-main__card-desc">
+                                <div class="certificate-main__card-title text30">Электронный сертификат</div>
+                                <div class="certificate-main__card-text">
+                                    <p>Приобретение подарочного электронного сертификата - идеальный способ дарить удовольствие выбора, обеспечивая близким возможность наслаждаться изысканными подарками, которые подчеркнут их уникальный вкус и предпочтения.</p>
+                                </div>
+                                <div class="certificate-main__card-btns">
+                                    <button class="certificate-main__card-btn btn btn-black">
+                                        <span>выбрать сертификат</span>
+                                    </button>
+                                    <button class="certificate-main__card-btn btn btn-black__outline">
+                                        <span>Проверить Баланс</span>
+                                    </button>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="certificate-info">
+            <div class="container">
+                <div class="certificate-info__inner tabs-inner">
+                    <div class="certificate-info__title mob-title text30">Как это работает</div>
+                    <div class="certificate-info__tabs">
+                        <div data-tab-path="1" class="certificate-info__tab tab active-tab">
+                            <span>Пластиковая карта</span>
+                        </div>
+                        <div data-tab-path="2" class="certificate-info__tab tab">
+                            <span>Электронный сертификат</span>
+                        </div>
+                    </div>
+                    <div class="certificate-info__wrap">
+                        <div data-content-path="1" class="certificate-info__left tab__content tab__content--active">
+                            <div class="certificate-info__title text30">Как это работает</div>
+                            <div class="certificate-info__subtitle">Пластиковая карта</div>
+                            <ul class="certificate-info__list">
+                                <li><span>1.</span>Выберите дизайн, номинал и количество подарочных сертификатов.</li>
+                                <li><span>2.</span>Напишите несколько тёплых слов, укажите телефон и имя получателя подарка.</li>
+                                <li><span>3.</span>Подарочную карту можно получить в одной из галерей или доставкой.</li>
+                            </ul>
+                        </div>
+                        <div data-content-path="2" class="certificate-info__right tab__content">
+                            <div class="certificate-info__title text30">Как это работает</div>
+                            <div class="certificate-info__subtitle">Электронный сертификат</div>
+                            <ul class="certificate-info__list">
+                                <li><span>1.</span>Выберите дизайн, номинал и количество подарочных сертификатов.</li>
+                                <li><span>2.</span>Напишите несколько тёплых слов, укажите телефон и email получателя подарка.</li>
+                                <li><span>3.</span>Отправьте сразу или запланируйте время отправки. Красивый подарочный сертификат приходит по SMS и на email.</li>
+                            </ul>
+                        </div>
+                    </div>
+                    <div class="certificate-info__cards">
+                        <div class="certificate-info__card">
+                            <div class="certificate-info__card-icon">
+                                <img src="img/certificate-info__icon.svg" alt="">
+                            </div>
+                            <div class="certificate-info__card-desc">
+                                <div class="certificate-info__card-title text30">Срок действия</div>
+                                <div class="certificate-info__card-text">
+                                    <p>Сертификат действует 3 года с момента покупки</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-info__card">
+                            <div class="certificate-info__card-icon">
+                                <img src="img/certificate-info__icon2.svg" alt="">
+                            </div>
+                            <div class="certificate-info__card-desc">
+                                <div class="certificate-info__card-title text30">Оплата товаров</div>
+                                <div class="certificate-info__card-text">
+                                    <p>При оплате товаров сертификатом действуют все акции и промокоды</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-info__card">
+                            <div class="certificate-info__card-icon">
+                                <img src="img/certificate-info__icon3.svg" alt="">
+                            </div>
+                            <div class="certificate-info__card-desc">
+                                <div class="certificate-info__card-title text30">Обмен и возврат</div>
+                                <div class="certificate-info__card-text">
+                                    <p>Сертификат не подлежит обмену и возврату</p>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="certificate-info__card">
+                            <div class="certificate-info__card-icon">
+                                <img src="img/certificate-info__icon4.svg" alt="">
+                            </div>
+                            <div class="certificate-info__card-desc">
+                                <div class="certificate-info__card-title text30">Остаток не сгорает</div>
+                                <div class="certificate-info__card-text">
+                                    <p>Остаток денежный средств можно использовать для дальнейших покупок</p>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="certificate-info2">
+            <div class="container">
+                <div class="certificate-info2__inner">
+                    <div class="certificate-info2__wrap">
+                        <div class="certificate-info2__title">Корпоративным клиентам</div>
+                        <div class="certificate-info2__subtitle">Корпоративный сертификат - отличный вариант решения многих корпоративных задач</div>
+                        <ul class="certificate-info2__list">
+                            <li>
+                                <i>
+                                    <img src="img/certificate-info2__icon.svg" alt="">
+                                </i>
+                                Поощрение сотрудников по итогам месяца, квартала, года
+                            </li>
+                            <li>
+                                <i>
+                                    <img src="img/certificate-info2__icon.svg" alt="">
+                                </i>
+                                Подарок  для клиентов и партнеров по бизнесу
+                            </li>
+                            <li>
+                                <i>
+                                    <img src="img/certificate-info2__icon.svg" alt="">
+                                </i>
+                                Поздравление сотрудников с 8 марта, новым годом и другими праздниками
+                            </li>
+                        </ul>
+                        <button data-modal="contactModal" class="certificate-info2__btn btn btn-black__outline">
+                            <span>Оставить заявку</span>
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </section>
+        <section class="certificate-info3">
+            <div class="container">
+                <div class="certificate-info3__inner">
+                    <div class="certificate-info3__left">
+                        <div class="certificate-info3__title">Условия приобретения подарочных карт и электронных сертификатов</div>
+                        <ul class="certificate-info3__list">
+                            <li>Подарочная карта и электронный подарочный сертификат являются подтверждением внесения платежа и дают право на приобретение товара из ассортимента на указанную в них сумму.</li>
+                            <li>Подарочная карта и электронный подарочный сертификат дают право на единовременное приобретение продукции.</li>
+                            <li>Если стоимость покупаемого товара меньше номинала электронного сертификата или подарочной карты, разница между номиналом сертификата или карты и стоимостью покупки в денежном эквиваленте не компенсируется.</li>
+                            <li>В случае, если стоимость покупаемого товара больше номинала подарочной карты или электронного сертификата, то покупатель доплачивает недостающую сумму.</li>
+                            <li>Товар, приобретенный с помощью электронного подарочного сертификата, возврату и обмену не подлежит.</li>
+                            <li>На покупку подарочной карты и электронного подарочного сертификата дисконтная программа не распространяется.</li>
+                        </ul>
+                        <a href="" download="" class="certificate-info3__link">Правила покупки и использования подарочных карт.pdf</a>
+                    </div>
+                    <div class="certificate-info3__right">
+                        <div class="certificate-info3__subtitle text30">Почему выбирают нас</div>
+                        <div class="certificate-info3__items">
+                            <div class="certificate-info3__item">
+                                <div class="certificate-info3__item-icon">
+                                    <img src="img/certificate-info3__icon.svg" alt="">
+                                </div>
+                                <div class="certificate-info3__item-text">
+                                    <p>Огромный выбор эксклюзивной подарочной продукции российских и зарубежных мастеров</p>
+                                </div>
+                            </div>
+                            <div class="certificate-info3__item">
+                                <div class="certificate-info3__item-icon">
+                                    <img src="img/certificate-info3__icon2.svg" alt="">
+                                </div>
+                                <div class="certificate-info3__item-text">
+                                    <p>Срочный подбор и экспресс доставка за 3 часа</p>
+                                </div>
+                            </div>
+                            <div class="certificate-info3__item">
+                                <div class="certificate-info3__item-icon">
+                                    <img src="img/certificate-info3__icon3.svg" alt="">
+                                </div>
+                                <div class="certificate-info3__item-text">
+                                    <p>Поддержка клиентов 24/7</p>
+                                </div>
+                            </div>
+                        </div>
+                        <a href="" class="certificate-info3__link">Подобрать подарок</a>
+                    </div>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <div class="modal" id="contactModal">
+        <div class="modal__dialog">
+            <button type="button" class="_close-modal modal__close" data-bs-dismiss="modal" aria-label="Close">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__content">
+                <div class="modal__title">Корпоративный заказ подарочных карт</div>
+                <form class="modal-form">
+                    <div class="modal-form__group">
+                        <label>Название организации <span></span></label>
+                        <input type="text" placeholder="Название вашей организации">
+                    </div>
+                    <div class="modal-form__group">
+                        <label>Эл. почта контактного лица организации</label>
+                        <input type="text" placeholder="Название вашей организации">
+                    </div>
+                    <div class="modal-form__group">
+                        <label>Телефон контактного лица организации <span></span></label>
+                        <div class="input-phone">
+                            <input type="text" placeholder="000 000-00-00">
+                        </div>
+                    </div>
+                    <div class="modal-form__group">
+                        <label>Заказ</label>
+                        <textarea placeholder="Комментарий к заказу"></textarea>
+                    </div>
+                    <button class="modal-form__btn btn btn-black__outline">
+                        <span>Отправить</span>
+                    </button>
+                    <div class="modal-form__check">
+                        <input type="checkbox" checked>
+                        <label>Я соглашаюсь с условиями <a href="">политики конфиденциальности</a></label>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+<script src="https://cdn.jsdelivr.net/gh/fancyapps/fancybox@3.5.7/dist/jquery.fancybox.min.js"></script>
+
+</body>
+
+</html>
