@@ -21,10 +21,33 @@
                     <a href="certificate.html">Подарочные сертификаты</a>
                     <a href="article.html">Статья</a>
                     <a href="article2.html">Статья 2</a>
+                    <a href="reviews.html">Блок с отзывами</a>
                 </div>
+                <button style="font-size: 24px; padding: 18px 36px; margin-top: 24px" class="language-btn btn-black__outline" data-modal="contactModal2">
+                    <span>Выбор языка</span>
+                </button>
             </div>
         </div>
     </main>
+
+    <div class="modal language-modal" id="contactModal2">
+        <div class="modal__dialog">
+            <button type="button" class="_close-modal modal__close" data-bs-dismiss="modal" aria-label="Close">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__content">
+                <div class="modal__title">Is your language English?</div>
+                <div class="language-modal__btns">
+                    <button class="language-modal__btn btn-black__outline">
+                        <span>Нет, Русский</span>
+                    </button>
+                    <button class="language-modal__btn btn-black">
+                        <span>Yes, English</span>
+                    </button>
+                </div>
+            </div>
+        </div>
+    </div>
 
 	<script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
