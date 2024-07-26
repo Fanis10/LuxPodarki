@@ -26,6 +26,9 @@
                 <button style="font-size: 24px; padding: 18px 36px; margin-top: 24px" class="language-btn btn-black__outline" data-modal="contactModal2">
                     <span>Выбор языка</span>
                 </button>
+                <button style="display: block; font-size: 24px; padding: 18px 36px; margin-top: 24px" class="language-btn btn-black__outline" data-modal="contactModal3">
+                    <span>Вход для оптовых клиентов</span>
+                </button>
             </div>
         </div>
     </main>
@@ -45,6 +48,38 @@
                         <span>Yes, English</span>
                     </button>
                 </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal authorization-modal" id="contactModal3">
+        <div class="modal__dialog">
+            <button type="button" class="_close-modal modal__close" data-bs-dismiss="modal" aria-label="Close">
+                <img src="img/close.svg" alt="">
+            </button>
+            <div class="modal__content">
+                <div class="modal__title">Авторизация оптового клиента</div>
+                <div class="modal__text">Для доступа к разделу “Оптовым клиентам” и для просмотра оптовых цен, авторизируйтесь:</div>
+                <form class="modal-form">
+                    <div class="modal-form__group">
+                        <label>Логин <span></span></label>
+                        <input type="text" placeholder="exemple@gmail.com">
+                    </div>
+                    <div class="modal-form__group password-group">
+                        <label>Пароль <span></span></label>
+                        <input class="password-input" type="password" placeholder="введите пароль">
+                        <span class="password-icon">
+                            <input class="password" type="checkbox" checked>
+                            <img src="img/password.svg" alt="">
+                        </span>
+                    </div>
+                    <button class="modal-form__btn btn btn-black__outline">
+                        <span>Войти</span>
+                    </button>
+                    <div class="modal-form__check">
+                        <input type="checkbox" checked="">
+                        <label>Я соглашаюсь с условиями <a href="">политики конфиденциальности</a></label>
+                    </div>
+                </form>
             </div>
         </div>
     </div>
