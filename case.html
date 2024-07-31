@@ -314,7 +314,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="gifts-connection">
+		<section id="gifts-connection" class="gifts-connection">
 			<div class="container">
 				<div class="gifts-connection__inner">
 					<h3 class="gifts-connection__title">Схема нашей работы</h3>
@@ -335,13 +335,20 @@
 						</div>
 						<div class="form-group gifts-connection__form-group">
 							<div class="form__file">
-								<input class="file-btn" type="file">
-								<label>
-									<i>
-										<img src="img/file-icon.svg" alt="">
-									</i>
-									<span>Прикрепить файл</span>
-								</label>
+								<p id="files-area">
+									<span id="filesList">
+										<span id="files-names"></span>
+									</span>
+								</p>
+								<div class="form__file-wrap">
+									<input class="file-btn" type="file" name="file[]" accept="" id="attachment">
+									<label>
+										<i>
+											<img src="img/file-icon.svg" alt="">
+										</i>
+										<span>Прикрепить файл</span>
+									</label>
+								</div>
 							</div>
 							<div class="form__check">
 								<input type="checkbox" checked>

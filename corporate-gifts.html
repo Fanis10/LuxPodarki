@@ -23,7 +23,7 @@
 							<p>Широкий выбор подарков от классических корпоративных сувениров до эксклюзивных предметов, созданных вручную и способных подчеркнуть уникальность вашей компании.</p>
 						</div>
 						<div class="gifts-main__btns">
-							<a href="" class="gifts-main__btn btn btn-black">
+							<a href="#gifts-connection" class="gifts-main__btn btn btn-black">
 								<span>Заявка на расчет</span>
 							</a>
 							<a download="" href="" class="gifts-main__btn btn btn-black__outline">
@@ -164,9 +164,9 @@
 						<div class="banner__text">
 							<p>Разработка и изготовление креативных корпоративных подарков и сувенирной продукции компании для бизнес-партнеров, клиентов и сотрудников от luxpodarki.ru!</p>
 						</div>
-						<button class="banner__btn banner__btn2 btn">
+						<a href="#gifts-connection" class="banner__btn banner__btn2 btn">
 							<span>Оставить заявку</span>
-						</button>
+						</a>
 					</div>
 				</div>
 			</div>
@@ -541,7 +541,7 @@
 				</div>
 			</div>
 		</section>
-		<section class="gifts-connection">
+		<section id="gifts-connection" class="gifts-connection">
 			<div class="container">
 				<div class="gifts-connection__inner">
 					<h3 class="gifts-connection__title">Схема нашей работы</h3>
@@ -562,13 +562,20 @@
 						</div>
 						<div class="form-group gifts-connection__form-group">
 							<div class="form__file">
-								<input class="file-btn" type="file">
-								<label>
-									<i>
-										<img src="img/file-icon.svg" alt="">
-									</i>
-									<span>Прикрепить файл</span>
-								</label>
+								<p id="files-area">
+									<span id="filesList">
+										<span id="files-names"></span>
+									</span>
+								</p>
+								<div class="form__file-wrap">
+									<input class="file-btn" type="file" name="file[]" accept="" id="attachment">
+									<label>
+										<i>
+											<img src="img/file-icon.svg" alt="">
+										</i>
+										<span>Прикрепить файл</span>
+									</label>
+								</div>
 							</div>
 							<div class="form__check">
 								<input type="checkbox" checked>
@@ -996,6 +1003,27 @@
 			</div>
 		</section>
 	</main>
+
+	<div class="connection-fixed">
+		<div class="container">
+			<div class="connection-fixed__inner">
+				<h6 class="connection-fixed__title">Связаться с нами</h6>
+				<div class="gifts-main__btns">
+					<a href="#gifts-connection" class="gifts-main__btn remove-btn btn btn-black">
+						<span>Заявка на расчет</span>
+					</a>
+					<a download="" href="" class="gifts-main__btn btn btn-black__outline">
+						<i>
+							<svg width="26" height="18" viewBox="0 0 26 18" fill="none" xmlns="http://www.w3.org/2000/svg">
+								<path d="M6.125 18C4.56571 18 3.23839 17.4379 2.14303 16.3137C1.04768 15.1896 0.5 13.822 0.5 12.2111C0.5 10.731 0.989583 9.41722 1.96875 8.26986C2.94792 7.12253 4.16506 6.50663 5.62019 6.42218C5.83012 4.82285 6.60736 3.35266 7.95191 2.0116C9.29647 0.670532 10.7708 0 12.375 0C12.7099 0 13.002 0.128729 13.2512 0.386189C13.5004 0.643649 13.625 0.945393 13.625 1.29142V10.6937L16.2019 8.04636L17.0865 8.96027L13 13.1821L8.91347 8.96027L9.79806 8.04636L12.375 10.6937V1.29142C10.8077 1.36094 9.47836 2.065 8.38703 3.40359C7.29568 4.74215 6.75 6.16392 6.75 7.66888H6.125C4.91667 7.66888 3.88542 8.11011 3.03125 8.99256C2.17708 9.87501 1.75 10.9404 1.75 12.1887C1.75 13.4371 2.17708 14.5025 3.03125 15.3849C3.88542 16.2674 4.91667 16.7086 6.125 16.7086H21.125C22 16.7086 22.7396 16.3965 23.3438 15.7724C23.9479 15.1482 24.25 14.3841 24.25 13.4801C24.25 12.5762 23.9479 11.8121 23.3438 11.1879C22.7396 10.5637 22 10.2517 21.125 10.2517H19.25V7.66888C19.25 6.60267 19.0208 5.62296 18.5625 4.72975C18.1042 3.83653 17.5 3.0944 16.75 2.50333V0.966055C17.9231 1.63659 18.8414 2.57244 19.5048 3.7736C20.1683 4.97477 20.5 6.27319 20.5 7.66888V8.96027H21.2692C22.4663 9.00001 23.4708 9.45406 24.2825 10.3224C25.0942 11.1908 25.5 12.2434 25.5 13.4801C25.5 14.7467 25.0773 15.8166 24.232 16.69C23.3866 17.5633 22.351 18 21.125 18H6.125Z" fill="#1C1B1F"/>
+							</svg>
+						</i>
+						<span>Скачать каталог</span>
+					</a>
+				</div>
+			</div>
+		</div>
+	</div>
 
 	<script src="js/libs.min.js"></script>
 <script src="js/main.min.js"></script>
