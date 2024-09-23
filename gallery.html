@@ -19,7 +19,9 @@
 			<div class="container">
 				<div class="info__inner">
 					<h1 class="h1">Наши галереи</h1>
-					<div id="map" class="map"></div>
+					<div class="map-wrap">
+						<div id="map" class="map"></div>
+					</div>
 					<div class="info__cards">
 						<div class="info-card">
 							<div class="info-card__img">
@@ -124,41 +126,88 @@
     </main>
 
 	<script type="text/javascript">
-    let map = document.querySelector("#map")
-    if(map){
-        ymaps.ready(init);
-    }
+
+    let center = [55.761016, 37.627562];
 
     function init() {
-        let map,
-            points = [
-                {
-                    coords: [55.761016, 37.627562],
-                    markerIcon: 'img/map-icon.svg'
-                },
-                {
-                    coords: [55.761533, 37.624427],
-                    markerIcon: 'img/map-icon2.svg'
-                },
-            ];
-        map = new ymaps.Map("map", {
-            center: [55.762687, 37.628810],
+        let map = new ymaps.Map('map', {
+            center: center,
             zoom: 17
         });
 
-        points.forEach(function (point) {
-            let placemark = new ymaps.Placemark(point.coords, {
+        let mapObjects = [
+            {
+                imgSrc: "img/balloon-img.webp",
+                title: "Лубянка",
+                address: "г. Москва, ул. Большая Лубянка д.14, стр.1",
+                phone: `<a class="info-phone" href="74959276067">+7 495 927-60-67</a>`,
+                cords: [55.761016, 37.627562],
+            },
+            {
+                imgSrc: "img/balloon-img.webp",
+                title: "Барвиха",
+                address: "Барвиха, д. 85/1, ТЦ Dream House, 2-й этаж\n",
+                phone: `<a class="info-phone" href="74951498944">+7 495 149-89-44</a>`,
+                cords: [55.761533, 37.624427],
+            },
+        ]
 
-            }, {
-                iconLayout: 'default#image',
-                iconImageHref: point.markerIcon,
-                hideIconOnBalloonOpen: false,
-                iconImageSize: [75, 75],
-                iconImageOffset: [-22, -29]
-            });
+        mapObjects.forEach(object => {
+            let placemark = new ymaps.Placemark(object.cords, {
+                    balloonContent: `
+
+            <div class="balloon">
+                <div class="balloon-img">
+                    <img src="${object.imgSrc}" alt="">
+                </div>
+                <div class="info-group">
+                    <h6 class="name-title">
+                        ${object.title}
+                        <span>
+                            <img src="img/balloon-icon.svg" alt="">
+                        </span>
+                     </h6>
+                    <div class="info__items">
+                        <div class="info__item">
+                            <strong>Время работы галереи:</strong>
+                            <span>Ежедневно с 09:00 до 21:00</span>
+                        </div>
+                        <div class="info__item">
+                            <strong>Адрес:</strong>
+                            <span>${object.address}</span>
+                        </div>
+                        <div class="info__item">
+                            <strong>Телефон:</strong>
+                            <span>${object.phone}</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+
+		`
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageSize: [70, 70],
+                    iconImageHref: "img/map-icon.svg",
+                },
+
+
+            );
+
             map.geoObjects.add(placemark);
         })
+
+        map.controls.remove('geolocationControl'); // удаляем геолокацию
+        map.controls.remove('searchControl'); // удаляем поиск
+        map.controls.remove('trafficControl'); // удаляем контроль трафика
+        map.controls.remove('typeSelector'); // удаляем тип
+        map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+        map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+        map.controls.remove('rulerControl'); // удаляем контрол правил
+
     }
+
+    ymaps.ready(init);
 
 </script>
 	<script src="js/libs.min.js"></script>
