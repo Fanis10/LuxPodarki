@@ -1,0 +1,168 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Наши галереи</title>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
+</head>
+
+
+<body>
+
+	<main class="main">
+		<section class="info">
+			<div class="container">
+				<div class="info__inner">
+					<h1 class="h1">Наши галереи</h1>
+					<div id="map" class="map"></div>
+					<div class="info__cards">
+						<div class="info-card">
+							<div class="info-card__img">
+								<img src="img/info-img.webp" alt="">
+							</div>
+							<div class="info-card__desc">
+								<div class="info-group">
+									<h6 class="name-title">Лубянка</h6>
+									<div class="info__items">
+										<div class="info__item">
+											<strong>Время работы галереи:</strong>
+											<span>Ежедневно с 09:00 до 21:00</span>
+										</div>
+										<div class="info__item">
+											<strong>Адрес:</strong>
+											<span>г. Москва, ул. Большая Лубянка д.14, стр.1</span>
+										</div>
+										<div class="info__item">
+											<strong>Телефон:</strong>
+											<span><a class="info-phone" href="74959276067">+7 495 927-60-67</a></span>
+										</div>
+									</div>
+								</div>
+								<div class="info-card__btns">
+									<button class="info-card__btn btn btn-black">
+										<span>перейти</span>
+									</button>
+									<button class="info-card__btn btn btn-black__outline">
+										<span>построить маршрут</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="info-card">
+							<div class="info-card__img">
+								<img src="img/info-img2.webp" alt="">
+							</div>
+							<div class="info-card__desc">
+								<div class="info-group">
+									<h6 class="name-title">Барвиха</h6>
+									<div class="info__items">
+										<div class="info__item">
+											<strong>Время работы галереи:</strong>
+											<span>Ежедневно с 09:00 до 21:00</span>
+										</div>
+										<div class="info__item">
+											<strong>Адрес:</strong>
+											<span>Барвиха, д. 85/1, ТЦ Dream House, 2-й этаж</span>
+										</div>
+										<div class="info__item">
+											<strong>Телефон:</strong>
+											<span><a class="info-phone" href="74951498944">+7 495 149-89-44</a></span>
+										</div>
+									</div>
+								</div>
+								<div class="info-card__btns">
+									<button class="info-card__btn btn btn-black">
+										<span>перейти</span>
+									</button>
+									<button class="info-card__btn btn btn-black__outline">
+										<span>построить маршрут</span>
+									</button>
+								</div>
+							</div>
+						</div>
+						<div class="info-card">
+							<div class="info-card__img">
+								<img src="img/info-img3.webp" alt="">
+							</div>
+							<div class="info-card__desc">
+								<div class="info-group">
+									<h6 class="name-title">Невский</h6>
+									<div class="info__items">
+										<div class="info__item">
+											<strong>Время работы галереи:</strong>
+											<span>Ежедневно с 09:00 до 21:00</span>
+										</div>
+										<div class="info__item">
+											<strong>Адрес:</strong>
+											<span>г. Санкт-Петербург, Невский пр-кт д. 32-34 лит А</span>
+										</div>
+										<div class="info__item">
+											<strong>Телефон:</strong>
+											<span><a class="info-phone" href="78122237473">+7 812 223-74-73</a></span>
+										</div>
+									</div>
+								</div>
+								<div class="info-card__btns">
+									<button class="info-card__btn btn btn-black">
+										<span>перейти</span>
+									</button>
+									<button class="info-card__btn btn btn-black__outline">
+										<span>построить маршрут</span>
+									</button>
+								</div>
+							</div>
+						</div>
+					</div>
+				</div>
+			</div>
+		</section>
+    </main>
+
+	<script type="text/javascript">
+    let map = document.querySelector("#map")
+    if(map){
+        ymaps.ready(init);
+    }
+
+    function init() {
+        let map,
+            points = [
+                {
+                    coords: [55.761016, 37.627562],
+                    markerIcon: 'img/map-icon.svg'
+                },
+                {
+                    coords: [55.761533, 37.624427],
+                    markerIcon: 'img/map-icon2.svg'
+                },
+            ];
+        map = new ymaps.Map("map", {
+            center: [55.762687, 37.628810],
+            zoom: 17
+        });
+
+        points.forEach(function (point) {
+            let placemark = new ymaps.Placemark(point.coords, {
+
+            }, {
+                iconLayout: 'default#image',
+                iconImageHref: point.markerIcon,
+                hideIconOnBalloonOpen: false,
+                iconImageSize: [75, 75],
+                iconImageOffset: [-22, -29]
+            });
+            map.geoObjects.add(placemark);
+        })
+    }
+
+</script>
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>
