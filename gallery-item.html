@@ -1,0 +1,145 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="UTF-8">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<meta name="keywords" content="">
+	<link rel="stylesheet" href="css/libs.min.css">
+	<link rel="stylesheet" href="css/style.min.css">
+	<title>Лубянка</title>
+	<script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU&apikey=9133eb49-3a97-4b2d-90be-6b80a97a5036" type="text/javascript"></script>
+</head>
+
+
+<body>
+
+	<main class="main">
+		<section class="info-main">
+			<div class="container">
+				<div class="info-main__inner">
+					<div class="info-main__top">
+						<div class="info-main__group">
+							<h1 class="info-main__title h1">Лубянка</h1>
+							<div class="info-group">
+								<div class="info__items">
+									<div class="info__item">
+										<strong>Время работы галереи:</strong>
+										<span>Ежедневно <br> с 09:00 до 21:00</span>
+									</div>
+									<div class="info__item">
+										<strong>Адрес:</strong>
+										<span>г. Москва, ул. Большая Лубянка <br> д.14, стр.1</span>
+									</div>
+									<div class="info__item">
+										<strong>Телефон:</strong>
+										<span><a class="info-phone" href="74959276067">+7 495 927-60-67</a></span>
+									</div>
+								</div>
+							</div>
+						</div>
+						<div class="info-main__group2">
+							<button class="info-main__btn btn btn-black">
+								<span>перейти в каталог</span>
+							</button>
+							<div class="info-main__text">
+								<p>Товары в наличии в галерее на Лубянке </p>
+							</div>
+						</div>
+					</div>
+					<h3 class="info-main__subtitle">Виртуальный тур по галерее</h3>
+					<div class="info-main__img">
+						<img src="img/info-main__img.webp" alt="">
+					</div>
+					<h3 class="info-main__subtitle">Фотографии галереи</h3>
+					<div class="info-main__items">
+						<a href="img/info-main__img.webp" class="info-main__item" data-fancybox="info-main__gallery">
+							<img src="img/info-main__img.webp" alt="">
+						</a>
+						<a href="img/info-main__img.webp" class="info-main__item" data-fancybox="info-main__gallery">
+							<img src="img/info-main__img.webp" alt="">
+						</a>
+						<a href="img/info-main__img.webp" class="info-main__item" data-fancybox="info-main__gallery">
+							<img src="img/info-main__img.webp" alt="">
+						</a>
+						<a href="img/info-main__img.webp" class="info-main__item" data-fancybox="info-main__gallery">
+							<img src="img/info-main__img.webp" alt="">
+						</a>
+						<a href="img/info-main__img.webp" class="info-main__item" data-fancybox="info-main__gallery">
+							<img src="img/info-main__img.webp" alt="">
+						</a>
+						<a href="img/info-main__img.webp" class="info-main__item" data-fancybox="info-main__gallery">
+							<img src="img/info-main__img.webp" alt="">
+						</a>
+					</div>
+					<div class="map-wrap">
+						<div id="map2" class="map2"></div>
+					</div>
+				</div>
+			</div>
+		</section>
+    </main>
+
+	<script type="text/javascript">
+
+    let center = [55.761016, 37.627562];
+
+    function init() {
+        let mapParams = {
+            center: center,
+            zoom: 17
+        }
+
+
+        if (window.innerWidth < 993) {
+            mapParams.zoom = 16
+        }
+
+        let map = new ymaps.Map('map2', mapParams);
+
+        let mapObjects = [
+            {
+                cords: [55.761016, 37.627562],
+            },
+        ]
+
+        mapObjects.forEach(object => {
+            let placemark = new ymaps.Placemark(object.cords, {
+                    balloonContent: `
+                        <div class="balloon2">
+                            <button class="balloon2__btn btn btn-black__outline">
+                                <span>построить маршрут</span>
+                            </button>
+                            <div class="balloon2__text">Ежедневно с 09:00 до 21:00</div>
+                        </div>
+		            `
+                }, {
+                    iconLayout: 'default#image',
+                    iconImageSize: [40, 40],
+                    iconImageHref: "img/map-icon.svg",
+                },
+
+
+            );
+
+            map.geoObjects.add(placemark);
+        })
+
+        map.controls.remove('geolocationControl'); // удаляем геолокацию
+        map.controls.remove('searchControl'); // удаляем поиск
+        map.controls.remove('trafficControl'); // удаляем контроль трафика
+        map.controls.remove('typeSelector'); // удаляем тип
+        map.controls.remove('fullscreenControl'); // удаляем кнопку перехода в полноэкранный режим
+        map.controls.remove('zoomControl'); // удаляем контрол зуммирования
+        map.controls.remove('rulerControl'); // удаляем контрол правил
+
+    }
+
+    ymaps.ready(init);
+
+</script>
+	<script src="js/libs.min.js"></script>
+<script src="js/main.min.js"></script>
+</body>
+
+</html>

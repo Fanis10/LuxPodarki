@@ -18,7 +18,7 @@
 		<section class="info">
 			<div class="container">
 				<div class="info__inner">
-					<h1 class="h1">Наши галереи</h1>
+					<h1 class="info__title h1">Наши галереи</h1>
 					<div class="map-wrap">
 						<div id="map" class="map"></div>
 					</div>
@@ -33,11 +33,11 @@
 									<div class="info__items">
 										<div class="info__item">
 											<strong>Время работы галереи:</strong>
-											<span>Ежедневно с 09:00 до 21:00</span>
+											<span>Ежедневно <br> с 09:00 до 21:00</span>
 										</div>
 										<div class="info__item">
 											<strong>Адрес:</strong>
-											<span>г. Москва, ул. Большая Лубянка д.14, стр.1</span>
+											<span>г. Москва, ул. Большая Лубянка <br> д.14, стр.1</span>
 										</div>
 										<div class="info__item">
 											<strong>Телефон:</strong>
@@ -65,7 +65,7 @@
 									<div class="info__items">
 										<div class="info__item">
 											<strong>Время работы галереи:</strong>
-											<span>Ежедневно с 09:00 до 21:00</span>
+											<span>Ежедневно <br> с 09:00 до 21:00</span>
 										</div>
 										<div class="info__item">
 											<strong>Адрес:</strong>
@@ -97,11 +97,11 @@
 									<div class="info__items">
 										<div class="info__item">
 											<strong>Время работы галереи:</strong>
-											<span>Ежедневно с 09:00 до 21:00</span>
+											<span>Ежедневно <br> с 09:00 до 21:00</span>
 										</div>
 										<div class="info__item">
 											<strong>Адрес:</strong>
-											<span>г. Санкт-Петербург, Невский пр-кт д. 32-34 лит А</span>
+											<span>г. Санкт-Петербург, Невский <br> пр-кт д. 32-34 лит А</span>
 										</div>
 										<div class="info__item">
 											<strong>Телефон:</strong>
@@ -130,10 +130,20 @@
     let center = [55.761016, 37.627562];
 
     function init() {
-        let map = new ymaps.Map('map', {
+        let mapParams = {
             center: center,
             zoom: 17
-        });
+        }
+
+        let iconImageSize = [70, 70]
+
+        if (window.innerWidth < 993) {
+            mapParams.zoom = 16
+            iconImageSize = [40, 40]
+        }
+
+
+        let map = new ymaps.Map('map', mapParams);
 
         let mapObjects = [
             {
@@ -155,39 +165,37 @@
         mapObjects.forEach(object => {
             let placemark = new ymaps.Placemark(object.cords, {
                     balloonContent: `
-
-            <div class="balloon">
-                <div class="balloon-img">
-                    <img src="${object.imgSrc}" alt="">
-                </div>
-                <div class="info-group">
-                    <h6 class="name-title">
-                        ${object.title}
-                        <span>
-                            <img src="img/balloon-icon.svg" alt="">
-                        </span>
-                     </h6>
-                    <div class="info__items">
-                        <div class="info__item">
-                            <strong>Время работы галереи:</strong>
-                            <span>Ежедневно с 09:00 до 21:00</span>
+                        <div class="balloon">
+                            <div class="balloon-img">
+                                <img src="${object.imgSrc}" alt="">
+                            </div>
+                            <div class="info-group">
+                                <h6 class="name-title">
+                                    ${object.title}
+                                    <span>
+                                        <img src="img/balloon-icon.svg" alt="">
+                                    </span>
+                                 </h6>
+                                <div class="info__items">
+                                    <div class="info__item">
+                                        <strong>Время работы галереи:</strong>
+                                        <span>Ежедневно <br> с 09:00 до 21:00</span>
+                                    </div>
+                                    <div class="info__item">
+                                        <strong>Адрес:</strong>
+                                        <span>${object.address}</span>
+                                    </div>
+                                    <div class="info__item">
+                                        <strong>Телефон:</strong>
+                                        <span>${object.phone}</span>
+                                    </div>
+                                </div>
+                            </div>
                         </div>
-                        <div class="info__item">
-                            <strong>Адрес:</strong>
-                            <span>${object.address}</span>
-                        </div>
-                        <div class="info__item">
-                            <strong>Телефон:</strong>
-                            <span>${object.phone}</span>
-                        </div>
-                    </div>
-                </div>
-            </div>
-
-		`
+		            `
                 }, {
                     iconLayout: 'default#image',
-                    iconImageSize: [70, 70],
+                    iconImageSize: iconImageSize,
                     iconImageHref: "img/map-icon.svg",
                 },
 
