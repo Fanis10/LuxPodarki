@@ -75,6 +75,12 @@
 					<div class="map-wrap">
 						<div id="map2" class="map2"></div>
 					</div>
+					<div class="balloon2 balloon2-mob">
+						<button class="balloon2__btn btn btn-black__outline">
+							<span>построить маршрут</span>
+						</button>
+						<div class="balloon2__text">Ежедневно с 09:00 до 21:00</div>
+					</div>
 				</div>
 			</div>
 		</section>
@@ -90,9 +96,11 @@
             zoom: 17
         }
 
+        let iconImageSize = [70, 70]
 
         if (window.innerWidth < 993) {
             mapParams.zoom = 16
+            iconImageSize = [40, 40]
         }
 
         let map = new ymaps.Map('map2', mapParams);
@@ -115,14 +123,16 @@
 		            `
                 }, {
                     iconLayout: 'default#image',
-                    iconImageSize: [40, 40],
-                    iconImageHref: "img/map-icon.svg",
+                    iconImageSize: iconImageSize,
+                    iconImageHref: "img/map-icon2.svg",
+                    hideIconOnBalloonOpen: false,
                 },
 
 
             );
 
             map.geoObjects.add(placemark);
+            placemark.balloon.open();
         })
 
         map.controls.remove('geolocationControl'); // удаляем геолокацию
