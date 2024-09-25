@@ -167,31 +167,36 @@
             let placemark = new ymaps.Placemark(object.cords, {
                     balloonContent: `
                         <div class="balloon">
-                            <div class="balloon-img">
-                                <img src="${object.imgSrc}" alt="">
-                            </div>
-                            <div class="info-group">
-                                <h6 class="name-title">
-                                    ${object.title}
-                                    <span>
-                                        <img src="img/balloon-icon.svg" alt="">
-                                    </span>
-                                 </h6>
-                                <div class="info__items">
-                                    <div class="info__item">
-                                        <strong>Время работы галереи:</strong>
-                                        <span>Ежедневно с <br> 09:00 до 21:00</span>
-                                    </div>
-                                    <div class="info__item">
-                                        <strong>Адрес:</strong>
-                                        <span>${object.address}</span>
-                                    </div>
-                                    <div class="info__item">
-                                        <strong>Телефон:</strong>
-                                        <span>${object.phone}</span>
+                            <div class="balloon__wrap">
+                                <div class="balloon-img">
+                                    <img src="${object.imgSrc}" alt="">
+                                </div>
+                                <div class="info-group">
+                                    <h6 class="name-title">
+                                        ${object.title}
+                                        <span>
+                                            <img src="img/balloon-icon.svg" alt="">
+                                        </span>
+                                     </h6>
+                                    <div class="info__items">
+                                        <div class="info__item">
+                                            <strong>Время работы галереи:</strong>
+                                            <span>Ежедневно с <br> 09:00 до 21:00</span>
+                                        </div>
+                                        <div class="info__item">
+                                            <strong>Адрес:</strong>
+                                            <span>${object.address}</span>
+                                        </div>
+                                        <div class="info__item">
+                                            <strong>Телефон:</strong>
+                                            <span>${object.phone}</span>
+                                        </div>
                                     </div>
                                 </div>
                             </div>
+                            <button class="balloon__btn btn btn-black">
+                                <span>перейти</span>
+                            </button>
                         </div>
 		            `
                 }, {
